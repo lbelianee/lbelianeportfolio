@@ -6,14 +6,17 @@
     <title>Portfolio - Eliane S.</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> <button id="theme-toggle">Changer le mode 💡</button>
-<div style="text-align: center; margin: 10px;">
-    <button onclick="document.documentElement.lang='fr'">Français 🇫🇷</button>
-    <button onclick="document.documentElement.lang='en'">English 🇬🇧</button>
-    <button onclick="document.documentElement.lang='es'">Español 🇪🇸</button>
-</div>
+<body> 
+    <button id="theme-toggle">Changer le mode 💡</button>
+    
+    <div style="text-align: center; margin: 10px;">
+        <button onclick="document.documentElement.lang='fr'">Français 🇫🇷</button>
+        <button onclick="document.documentElement.lang='en'">English 🇬🇧</button>
+        <button onclick="document.documentElement.lang='es'">Español 🇪🇸</button>
+    </div>
 
-    <h1 class="titre">PORTFOLIO DE ELIANE S.</h1>   
+    <!-- Ajout de lang="fr" sur le premier titre -->
+    <h1 class="titre" lang="fr">PORTFOLIO DE ELIANE S.</h1>   
     <h1 class="titre" lang="en">PORTFOLIO OF ELIANE S.</h1>
     <h1 class="titre" lang="es">PORTAFOLIO DE ELIANE S.</h1>
 
@@ -97,24 +100,22 @@
 
     <p>THE CLMB est un média dédié aux jeunes filles et aux femmes, dont la mission est de les valoriser et de les encourager au quotidien à travers la mode, des témoignages inspirants et le lifestyle.<br>Outils utilisés : WordPress, Canva, YouTube, CapCut, DaVinci Resolve</p>
 
+    <!-- Section Photographies nettoyée (doublon supprimé) -->
     <h3>PHOTOGRAPHIES</h3>
+    <p>2024</p> 
     <p>
-       <p> 2024<br>
-       <h3>PHOTOGRAPHIES</h3>
-<p>2024</p> 
-<p>
-    <a href="https://portfolioelianeselengani.my.canva.site/portfolio-r-alisation-photographique" target="_blank">RÉALISATIONS PHOTOGRAPHIQUES</a>
-</p>
-<p>
-    Grâce à mon magazine, j’ai commencé à prendre des photos qui ont un lien avec la mode.<br>
-    Outils utilisés : VSCO, Paramètres de l'iPhone, Lightroom
-</p>
-<div class="fashionweek">
-    <img src="PFW 2.jpg" alt="photospfw" class="img-verticale img-centree">
-    <img src="DSC02455_VSCO.jpg" alt="photospfw" class="img-verticale img-centree">
-    <img src="DSC02480_VSCO.jpg" alt="photospfw" class="img-verticale img-centree">
-    <img src="IMG_1953.JPG" alt="photospfw" class="img-verticale img-centree">
-</div>
+        <a href="https://portfolioelianeselengani.my.canva.site/portfolio-r-alisation-photographique" target="_blank">RÉALISATIONS PHOTOGRAPHIQUES</a>
+    </p>
+    <p>
+        Grâce à mon magazine, j’ai commencé à prendre des photos qui ont un lien avec la mode.<br>
+        Outils utilisés : VSCO, Paramètres de l'iPhone, Lightroom
+    </p>
+    <div class="fashionweek">
+        <img src="PFW 2.jpg" alt="photospfw" class="img-verticale">
+        <img src="DSC02455_VSCO.jpg" alt="photospfw" class="img-verticale">
+        <img src="DSC02480_VSCO.jpg" alt="photospfw" class="img-verticale">
+        <img src="IMG_1953.JPG" alt="photospfw" class="img-verticale">
+    </div>
 
     <h3>PROJET WINDMAP</h3>
     <p>
@@ -150,6 +151,5 @@
             document.body.classList.toggle('light-mode');
         });
     </script>
-
 </body>
 </html>

@@ -2,16 +2,16 @@ body {
     background-color: #121212;
     color: #ffffff;
     transition: background 0.3s, color 0.3s; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; 
+    text-align: center;
+    margin: 0;
+    padding: 20px;
 }
 
 body.light-mode {
     background-color: #f4f4f9;
     color: #000000;
-}
-body {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400; 
-    text-align: center;
 }
 
 h1, h2, h3 {
@@ -22,7 +22,6 @@ h1, h2, h3 {
 
 img {
     display: block;
-    margin-top: 15px;
     border-radius: 6px; 
     transition: transform 0.2s; 
 }
@@ -47,21 +46,20 @@ img:hover {
     height: auto;
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-
 }
 
-.galerie-mode {
+.img-centree {
+    display: block;
+    margin: 20px auto;
+}
+
+.galerie-mode, .logotype {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;  
     gap: 15px;
     margin: 20px auto;
     max-width: 960px;       
-}
-
-.img-centree {
-    display: block;
-    margin: 20px auto;
 }
 
 .lien-projet {
@@ -76,23 +74,17 @@ img:hover {
     margin: 20px auto;
 }
 
+/* Grille Fashion Week améliorée pour mobile et desktop */
 .fashionweek {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 15px;
     max-width: 960px; 
     margin: 20px auto;
+    justify-items: center; /* Centre les images sur mobile */
 }
 
-.logotype {
- display: flex;
-    flex-wrap: wrap;
-    justify-content: center;  
-    gap: 15px;
-    margin: 20px auto;
-    max-width: 960px;  
-}
-
-.html:not([lang="fr"]) [lang="fr"] { display: none !important; }
-.html:not([lang="en"]) [lang="en"] { display: none !important; }
-.html:not([lang="es"]) [lang="es"] { display: none !important; }
+/* CORRECTION DU BUG DES LANGUES (retrait du point devant html) */
+html:not([lang="fr"]) [lang="fr"] { display: none !important; }
+html:not([lang="en"]) [lang="en"] { display: none !important; }
+html:not([lang="es"]) [lang="es"] { display: none !important; }
