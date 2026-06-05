@@ -96,3 +96,11 @@ img:hover {
 html:not([lang="fr"]) [lang="fr"] { display: none !important; }
 html:not([lang="en"]) [lang="en"] { display: none !important; }
 html:not([lang="es"]) [lang="es"] { display: none !important; }
+
+
+p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.6; 
+}
+
