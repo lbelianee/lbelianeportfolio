@@ -94,9 +94,8 @@ img:hover {
 }
 
 button, .btn-langue, .btn-mode { 
-    background-color: #6366f1; 
+    background-color: #0004ff; 
     color: white; /
-    border: none; 
     padding: 10px 20px; 
     font-size: 14px; 
     font-weight: bold;
