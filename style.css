@@ -1,24 +1,64 @@
+/* 1. IMPORTATION ET APPLICATION DE LA POLICE POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
 body {
     background-color: #121212;
     color: #ffffff;
     transition: background 0.3s, color 0.3s; 
+    
+    /* Application globale de Poppins */
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400; 
+    
+    /* Centrage global du texte */
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 body.light-mode {
     background-color: #f4f4f9;
     color: #000000;
 }
-body {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400; 
-    text-align: center;
-}
 
+/* 2. TITRES (GROS ET GRAS) */
 h1, h2, h3 {
-    font-weight: 700; 
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 800; /* Très gras */
+    font-size: 2.8rem; /* Gros titre */
     letter-spacing: -0.5px; 
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/* 3. PARAGRAPHES AJUSTÉS ET CENTRÉS */
+p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.2rem; /* Réduit (2rem était beaucoup trop gros) */
+    line-height: 1.6; 
+    text-align: center;
+    max-width: 800px; /* Évite que le texte s'étale trop sur grand écran */
+    margin: 15px auto; /* Centre le bloc de texte horizontalement */
+}
+
+/* 4. BACKGROUND VIDÉO PARFAITEMENT CENTRÉ */
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%); /* Force le centrage absolu mathématique */
+    z-index: -100;
+    object-fit: cover; 
+    object-position: center; 
+    opacity: 0.35; 
+}
+
+/* --- LE RESTE DE TON CODE (Inchangé mais nettoyé) --- */
 
 img {
     display: block;
@@ -33,30 +73,33 @@ img:hover {
 
 .img-horizontale {
     width: 100%;
-    max-width: 250px;
+    max-width: 450px;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .img-verticale {
     width: 100%;
-    max-width: 250px;
+    max-width: 450px;
     height: auto;
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-
+    margin: 10px auto; /* Ajouté pour s'assurer qu'elle se centre aussi */
 }
 
 .galerie-mode {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: nowrap !important;
     justify-content: center;  
-    gap: 15px;
+    flex-direction: row !important;
+    gap: 20px !important;
     margin: 20px auto;
-    max-width: 960px;       
+    max-width: 960px;   
+    width: 100% !important;   
+    align-items: center !important; 
 }
 
 .img-centree {
@@ -85,7 +128,7 @@ img:hover {
 }
 
 .logotype {
- display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;  
     gap: 15px;
@@ -95,7 +138,7 @@ img:hover {
 
 button, .btn-langue, .btn-mode { 
     background-color: #ffffff; 
-    color: rgb(0, 0, 0); /
+    color: rgb(0, 0, 0); 
     padding: 10px 20px; 
     font-size: 14px; 
     font-weight: bold;
@@ -108,20 +151,4 @@ button, .btn-langue, .btn-mode {
 button:hover, .btn-langue:hover, .btn-mode:hover {
     background-color: #bcbcbc; 
     transform: translateY(-2px); 
-}
-
-#bg-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: min-content;
-    height: auto;
-    z-index: -100;
-    object-fit: cover; 
-    
-    object-position: center; 
-    
-    opacity: 0.35; 
 }
