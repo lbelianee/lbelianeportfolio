@@ -92,3 +92,6 @@ img:hover {
     margin: 20px auto;
     max-width: 960px;  
 }
+
+html:not([lang="fr"]) [lang="fr"] { display: none !important; }
+html:not([lang="pt-BR"]) [lang="pt-BR"] { display: none !important; }
