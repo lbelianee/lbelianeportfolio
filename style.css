@@ -106,7 +106,7 @@ button, .btn-langue, .btn-mode {
 }
 
 button:hover, .btn-langue:hover, .btn-mode:hover {
-    background-color: #4f46e5; 
+    background-color: #000000; 
     transform: translateY(-2px); 
 }
 
