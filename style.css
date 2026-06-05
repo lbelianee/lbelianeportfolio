@@ -93,5 +93,6 @@ img:hover {
     max-width: 960px;  
 }
 
-html:not([lang="fr"]) [lang="fr"] { display: none !important; }
-html:not([lang="pt-BR"]) [lang="pt-BR"] { display: none !important; }
+.html:not([lang="fr"]) [lang="fr"] { display: none !important; }
+.html:not([lang="en"]) [lang="en"] { display: none !important; }
+.html:not([lang="es"]) [lang="es"] { display: none !important; }
