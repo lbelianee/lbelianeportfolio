@@ -121,7 +121,7 @@
 
     <h3>PROJET WINDMAP</h3>
     <p> 2024<br>
-        
+
         <a href="Eliane Sele Ngani Windmap.pdf" target="_blank"> MON LOGO WINDMAP</a>
     </p>
     <p>Réalisation d’un logotype en lien avec la météo.<br>Outil utilisé : Illustrator</p>
@@ -154,6 +154,39 @@
         btnToggle.addEventListener('click', function() {
             document.body.classList.toggle('light-mode');
         });
+        
+const translations = {
+    fr: {
+        main_title: "MON PORTFOLIO",
+        jp_title: "JEUNES PAGES",
+        jp_desc: "2023<br>Durant 6 mois, j'ai travaillé au sein de cette association dans le cadre de mon service civique.<br>Nous avons écrit des articles sur l'actualité avec des élèves de primaires et des élèves de collèges.<br>Outils utilisés : InDesign, WordPress"
+    },
+    en: {
+        main_title: "MY PORTFOLIO",
+        jp_title: "YOUNG PAGES",
+        jp_desc: "2023<br>For 6 months, I worked within this association as part of my civic service.<br>We wrote news articles with primary and middle school students.<br>Tools used: InDesign, WordPress"
+    },
+    es: {
+        main_title: "MI PORTAFOLIO",
+        jp_title: "PÁGINAS JÓVENES",
+        jp_desc: "2023<br>Durante 6 meses, trabajé en esta asociación en el marco de mi servicio cívico.<br>Escribimos artículos de actualidad con alumnos de primaria y secundaria.<br>Herramientas utilizadas: InDesign, WordPress"
+    }
+};
+
+function changeLanguage(lang) {
+    const elements = document.querySelectorAll('[data-key]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        // Si la traduction existe pour cette clé et cette langue, on l'applique
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        }
+    });
+}
+document.querySelector('.btn-fr').addEventListener('click', () => changeLanguage('fr'));
+document.querySelector('.btn-en').addEventListener('click', () => changeLanguage('en'));
+document.querySelector('.btn-es').addEventListener('click', () => changeLanguage('es'));
     </script>
 </body>
 </html>
